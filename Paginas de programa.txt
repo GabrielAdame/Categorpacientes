@@ -1,0 +1,13 @@
+Paginas de programa
+Inicio
+	Archivos
+	Contiene los registros previos de pacientes
+
+	Pacientes en processo
+	Los registros de pacientes que estan recibiendo tratamiento o no lo han recibido
+
+	Ingresar paciente nuevo
+	Pagina para ingresar la informacion de un paciente nuevo incluyendo una foto de la herida
+		
+
+P.S. cada pagina con su respectivos models y con pacientes como su entidad necesaria
