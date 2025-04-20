@@ -1,7 +1,7 @@
 Paginas de programa
 Home
 	Pacientes
-	Los registros de pacientes que estan recibiendo tratamiento o no lo han recibido
+	Los registros de pacientes 
 	
 	Ingresar paciente nuevo
 	Pagina para ingresar la informacion de un paciente nuevo incluyendo una foto de la herida
