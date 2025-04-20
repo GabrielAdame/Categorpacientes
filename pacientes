@@ -1,7 +1,8 @@
 struct paciente{
   let id: UUID = UUID()
   let nombre : String
-  let apellido: String
+  let tratamiento: BOOL
   let genero : string
+  edad : INT
   herida: heridaML
 }
