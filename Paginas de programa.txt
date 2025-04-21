@@ -1,11 +1,41 @@
 Paginas de programa
 Home
-	Pacientes
-	Los registros de pacientes 
-	
-	Ingresar paciente nuevo
-	Pagina para ingresar la informacion de un paciente nuevo incluyendo una foto de la herida
-	lo cual incluye el modelo de ml
+Pacientes(Pagina principal)
+Los registros de pacientes
+Tienes los pacientes no tratados(bool 1) con un boton en la esquina para agregar pacientes(en la esquina derecha), con un boton para revisar los resgistros de pacientes (ya sea en la esquina opuesta,por ejemplo) 
+los cuales pueden ser los no tratados y los tratados(bool 0)
+
+Ingresar paciente nuevo
+Pagina para ingresar la informacion de un paciente nuevo incluyendo una foto de la herida
+visualmente solo necesita lugares done recibe la informacion que se pide
+de manera tecnica recibela informacion, y cuando recibe la imagen el ml la identifica y la asigna a una de las categorias previamente establecidas
 			
 
 P.S. cada pagina con su respectivos models y con pacientes como su entidad necesaria
+
+func lethalityLevel(for category: String) -> String {
+    switch category.lowercased() {
+    case "stab_wound":
+        return "Alta letalidad"
+    case "laceration", "burns", "cut":
+        return "Letalidad media"
+    case "abrasions", "bruises", "ingrown_nails":
+        return "Baja letalidad"
+    default:
+        return "Desconocido"
+    }
+}
+
+func priorityLevel(from lethality: String) -> Int {
+    switch lethality {
+    case "Alta letalidad":
+        return 1
+    case "Letalidad media":
+        return 2
+    default:
+        return 3
+    }
+}
+la funcion de lethalityLevel recibira el resultado del ml y lo pasa a una categoria preestablecida
+y luego de lethality lo pasas a prioridad que te da el numero basico de entre menor el numero mayor prioridad(si modificas lo numeros de los returns lo pudieras hacer al reves pero eso es de preferencia)
+}
